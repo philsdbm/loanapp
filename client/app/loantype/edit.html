@@ -42,13 +42,13 @@
 
                 <div class="row">
                     <div class="form-group col-xs-6 col-md-4">
-                        <label for="contributableInput" class="ng-binding">Contributable</label>
+                        <label for="capital_buildupInput" class="ng-binding">Capital_buildup</label>
                         <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
                         
-                        <select name="contributableInput" required 
-                        		ng-model="loantype.contributable" 
-                        		class="form-control"
-                        		ng-options="x.value as x.label for x in trueFalseOptions"></select>
+                        <input name="capital_buildupInput"
+                               ng-model="loantype.capital_buildup"
+                               class="form-control"
+                               placeholder="Enter Capital_buildup"/>
                         <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
                         
                     </div>

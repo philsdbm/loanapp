@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
  * Bureau Schema
  */
 var BureauSchema = new Schema({
-    bureau_name: String
+    name: String
 });
 
 module.exports = mongoose.model('Bureau',  BureauSchema);

@@ -9,7 +9,7 @@ var mongoose = require('mongoose'),
 var LoantypeSchema = new Schema({
     name: String,
     percent: Number,
-    contributable: Boolean
+    capital_buildup: Number
 });
 
 module.exports = mongoose.model('Loantype',  LoantypeSchema);

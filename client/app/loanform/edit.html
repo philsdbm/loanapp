@@ -60,9 +60,8 @@
                         
                         <select name="memberInput"
                                 ng-model="loanform.member"
-                                ng-change="change_member()"
                                 class="form-control"
-                                ng-options="item._id as combined(item) for item in memberList"></select>
+                                ng-options="item._id as getMemberName(item) for item in memberList"></select>
                         
                     </div>
                 </div>
@@ -76,8 +75,7 @@
                         <select name="bureauInput"
                                 ng-model="loanform.bureau"
                                 class="form-control"
-                                ng-options="item._id as item.bureau_name for item in bureauList"
-                                ng-disabled="true"></select>
+                                ng-options="item._id as item.name for item in bureauList"></select>
                         
                     </div>
                 </div>

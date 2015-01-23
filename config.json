@@ -30,7 +30,7 @@
             "model": {
                 "name": "String",
                 "percent": "Number",
-                "contributable": "Boolean"
+                "capital_buildup": "Number"
             }
         },
         {

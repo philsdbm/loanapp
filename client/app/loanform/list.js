@@ -16,9 +16,6 @@ angular.module('testYeomanApp')
             });
         });
     }
-    $scope.combined = function(member){
-        return member.last_name + ", " + member.first_name + " " + member.middle_name;
-    }
 
       
         $http.get('/api/renewaltypes').success(function(renewaltypes) {
@@ -49,6 +46,10 @@ angular.module('testYeomanApp')
                 return ( member._id === id );
             });
             return results[0];
+        }
+        
+        $scope.getMemberName = function(member) {
+        	return member.last_name + ", " + member.first_name + " " + member.middle_name;
         }
         
         $http.get('/api/bureaus').success(function(bureaus) {
