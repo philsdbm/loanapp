@@ -6,7 +6,7 @@
     	{
             "name": "bureau",
             "model": {
-                "bureau_name": "String"
+                "name": "String"
             }
         },
         {

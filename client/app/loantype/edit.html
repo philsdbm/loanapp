@@ -45,10 +45,10 @@
                         <label for="contributableInput" class="ng-binding">Contributable</label>
                         <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
                         
-                        <input name="contributableInput"
-                               ng-model="loantype.contributable"
-                               class="form-control"
-                               placeholder="Enter Contributable"/>
+                        <select name="contributableInput" required 
+                        		ng-model="loantype.contributable" 
+                        		class="form-control"
+                        		ng-options="x.value as x.label for x in trueFalseOptions"></select>
                         <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
                         
                     </div>

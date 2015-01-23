@@ -69,7 +69,4 @@ angular.module('testYeomanApp')
         return results[0];
     }
     
-    
-
-        
   }]);

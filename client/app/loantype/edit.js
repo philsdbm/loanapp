@@ -24,6 +24,14 @@ angular.module('testYeomanApp')
             });
         }
     };
+    
+    $scope.trueFalseOptions = [{
+        value: true,
+        label: 'Yes'
+    }, {
+        value: false,
+        label: 'No'
+    }];
 
       
   }]);
