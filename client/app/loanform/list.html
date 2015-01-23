@@ -1,0 +1,61 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default" ng-click="addNew()" >Add</button>
+            </div>
+
+            <table class="table table-condensed">
+                <thead>
+                    <tr style="font-size:14px;">
+            
+
+                        <th>Loan date</th>
+            
+
+                        <th>Renewaltype</th>
+            
+
+                        <th>Loantype</th>
+            
+
+                        <th>Member</th>
+            
+
+                        <th>Bureau</th>
+            
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in loanforms" ng-class-even="table-striped" style="cursor:pointer">
+                        <td>{{item.loan_date | date : "MM/dd/yyyy"}}</td>
+                        
+                        <td>{{getRenewaltypeById(item.renewaltype).name}}</td>
+                
+                        <td>{{getLoantypeById(item.loantype).name}}</td>
+                
+                        <td>{{combined(getMemberById(item.member))}}</td>
+                
+                        <td>{{getBureauById(item.bureau).bureau_name}}</td>
+                
+            
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default" ng-click="selectItem(item)" >Edit</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default" ng-click="deleteItem(item)" >Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

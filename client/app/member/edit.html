@@ -1,0 +1,98 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="ng-binding"></h1>
+
+            <form role="form" name="form" ng-submit="saveItem()" novalidate=""
+                  class="ng-pristine ng-invalid ng-invalid-required">
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="first_nameInput" class="ng-binding">First_name</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="first_nameInput"
+                               ng-model="member.first_name"
+                               class="form-control"
+                               placeholder="Enter First_name"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="middle_nameInput" class="ng-binding">Middle_name</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="middle_nameInput"
+                               ng-model="member.middle_name"
+                               class="form-control"
+                               placeholder="Enter Middle_name"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="last_nameInput" class="ng-binding">Last_name</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="last_nameInput"
+                               ng-model="member.last_name"
+                               class="form-control"
+                               placeholder="Enter Last_name"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="bureauInput" class="ng-binding">Bureau</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <select name="bureauInput"
+                                ng-model="member.bureau"
+                                class="form-control"
+                                ng-options="item._id as item.bureau_name for item in bureauList"></select>
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="join_dateInput" class="ng-binding">Join_date</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input type="date"
+                               name="join_dateInput"
+                               ng-model="member.join_date"
+                               class="form-control"
+                               placeholder="Enter Join_date"/>
+                        
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xs-6 col-md-4">
+                        <button type="submit" class="btn btn-primary pull-right" ng-disabled="form.$error.required"
+                                disabled="disabled"><span class="ng-binding">Save</span> <span
+                                class="glyphicon glyphicon-chevron-right"></span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>

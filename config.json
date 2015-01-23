@@ -1,0 +1,46 @@
+{
+    "clean": true,
+    "appName": "testYeomanApp",
+    "globalModel":{},
+    "entities": [
+    	{
+            "name": "bureau",
+            "model": {
+                "bureau_name": "String"
+            }
+        },
+        {
+            "name": "member",
+            "model": {
+                "first_name": "String",
+				"middle_name": "String",
+				"last_name": "String",
+				"bureau": "MongooseReference:Bureau",
+                "join_date": "Date"
+            }
+        },
+        {
+            "name": "renewaltype",
+            "model": {
+                "name": "String"
+            }
+        },
+        {
+            "name": "loantype",
+            "model": {
+                "name": "String"
+            }
+        },
+        {
+            "name": "loanform",
+            "model": {
+            	"loan_date": "Date",
+                "renewaltype": "MongooseReference:Renewaltype",
+                "loantype": "MongooseReference:Loantype",
+				"member": "MongooseReference:Member",
+				"bureau": "MongooseReference:Member.bureau"
+            }
+        }
+    ]
+}
+
