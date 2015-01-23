@@ -16,6 +16,7 @@
 				"middle_name": "String",
 				"last_name": "String",
 				"bureau": "MongooseReference:Bureau",
+				"salary": "Number",
                 "join_date": "Date"
             }
         },

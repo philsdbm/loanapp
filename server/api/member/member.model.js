@@ -11,6 +11,7 @@ var MemberSchema = new Schema({
     middle_name: String,
     last_name: String,
     bureau: {type: Schema.ObjectId, ref:'Bureau'},
+    salary: Number,
     join_date: Date
 });
 
