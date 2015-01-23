@@ -24,6 +24,36 @@
                     </div>
                 </div>
                 
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="percentInput" class="ng-binding">Percent</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="percentInput"
+                               ng-model="loantype.percent"
+                               class="form-control"
+                               placeholder="Enter Percent"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="contributableInput" class="ng-binding">Contributable</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="contributableInput"
+                               ng-model="loantype.contributable"
+                               class="form-control"
+                               placeholder="Enter Contributable"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
                 <div class="row">
                     <div class="col-xs-6 col-md-4">
                         <button type="submit" class="btn btn-primary pull-right" ng-disabled="form.$error.required"

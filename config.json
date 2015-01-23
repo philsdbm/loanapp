@@ -28,7 +28,9 @@
         {
             "name": "loantype",
             "model": {
-                "name": "String"
+                "name": "String",
+                "percent": "Number",
+                "contributable": "Boolean"
             }
         },
         {
