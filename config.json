@@ -17,11 +17,13 @@
 				"last_name": "String",
 				"bureau": "MongooseReference:Bureau",
 				"salary": "Number",
+				"fixed_deposit": "Number",
+				"savings_deposit": "Number",
                 "join_date": "Date"
             }
         },
         {
-            "name": "renewaltype",
+            "name": "renewal_type",
             "model": {
                 "name": "String"
             }
@@ -38,10 +40,28 @@
             "name": "loanform",
             "model": {
             	"loan_date": "Date",
-                "renewaltype": "MongooseReference:Renewaltype",
+                "renewal_type": "MongooseReference:renewal_type",
                 "loantype": "MongooseReference:Loantype",
-				"member": "MongooseReference:Member",
-				"bureau": "MongooseReference:Member.bureau"
+				"member": "MongooseReferenceCmbName:Member:bureau-salary-fixed_deposit-savings_deposit",
+				"salary": "Number;hidden",
+				"fixed_deposit": "Number;hidden",
+				"bureau": "MongooseReference:Bureau;hidden",
+				"loans_granted": "Number",
+				"interest_on_loans": "Number;hidden",
+				"service_charge": "Number;hidden",
+				"fines_and_penalties": "Number;hidden",
+				"underpayment_of_previous_loan": "Number;hidden",
+				"previous_loan_granted_on": "Date;hidden",
+				"previous_loan": "Number;hidden",
+				"less_payments": "Number;hidden",
+				"notes": "String;hidden",
+				"capital_buildup": "Number;hidden",
+				"net_loan_proceeds": "Number",
+				"months_to_pay": "Number",
+				"loan_monthly_repayment": "Number",
+				"check_no": "Number",
+				"check_amount": "Number;hidden",
+				"check_date": "Date;hidden"
             }
         }
     ]

@@ -15,7 +15,7 @@
                         <th>Loan date</th>
             
 
-                        <th>Renewaltype</th>
+                        <th>Renewal type</th>
             
 
                         <th>Loantype</th>
@@ -24,7 +24,61 @@
                         <th>Member</th>
             
 
-                        <th>Bureau</th>
+                        <th ng-hide="true">Salary</th>
+            
+
+                        <th ng-hide="true">Fixed deposit</th>
+            
+
+                        <th ng-hide="true">Bureau</th>
+            
+
+                        <th>Loans granted</th>
+            
+
+                        <th ng-hide="true">Interest on_loans</th>
+            
+
+                        <th ng-hide="true">Service charge</th>
+            
+
+                        <th ng-hide="true">Fines and_penalties</th>
+            
+
+                        <th ng-hide="true">Underpayment of_previous_loan</th>
+            
+
+                        <th ng-hide="true">Previous loan_granted_on</th>
+            
+
+                        <th ng-hide="true">Previous loan</th>
+            
+
+                        <th ng-hide="true">Less payments</th>
+            
+
+                        <th ng-hide="true">Notes</th>
+            
+
+                        <th ng-hide="true">Capital buildup</th>
+            
+
+                        <th>Net loan_proceeds</th>
+            
+
+                        <th>Months to_pay</th>
+            
+
+                        <th>Loan monthly_repayment</th>
+            
+
+                        <th>Check no</th>
+            
+
+                        <th ng-hide="true">Check amount</th>
+            
+
+                        <th ng-hide="true">Check date</th>
             
                         <th></th>
                         <th></th>
@@ -34,14 +88,50 @@
                     <tr ng-repeat="item in loanforms" ng-class-even="table-striped" style="cursor:pointer">
                         <td>{{item.loan_date | date : "MM/dd/yyyy"}}</td>
                         
-                        <td>{{getRenewaltypeById(item.renewaltype).name}}</td>
+                        <td>{{getRenewal_typeById(item.renewal_type).name}}</td>
                 
                         <td>{{getLoantypeById(item.loantype).name}}</td>
                 
                         <td>{{getMemberName(getMemberById(item.member))}}</td>
                 
-                        <td>{{getBureauById(item.bureau).name}}</td>
+                        <td ng-hide="true">{{item.salary}}</td>
+                        
+                        <td ng-hide="true">{{item.fixed_deposit}}</td>
+                        
+                        <td ng-hide="true">{{getBureauById(item.bureau).name}}</td>
                 
+                        <td>{{item.loans_granted}}</td>
+                        
+                        <td ng-hide="true">{{item.interest_on_loans}}</td>
+                        
+                        <td ng-hide="true">{{item.service_charge}}</td>
+                        
+                        <td ng-hide="true">{{item.fines_and_penalties}}</td>
+                        
+                        <td ng-hide="true">{{item.underpayment_of_previous_loan}}</td>
+                        
+                        <td ng-hide="true">{{item.previous_loan_granted_on | date : "MM/dd/yyyy"}}</td>
+                        
+                        <td ng-hide="true">{{item.previous_loan}}</td>
+                        
+                        <td ng-hide="true">{{item.less_payments}}</td>
+                        
+                        <td ng-hide="true">{{item.notes}}</td>
+                        
+                        <td ng-hide="true">{{item.capital_buildup}}</td>
+                        
+                        <td>{{item.net_loan_proceeds}}</td>
+                        
+                        <td>{{item.months_to_pay}}</td>
+                        
+                        <td>{{item.loan_monthly_repayment}}</td>
+                        
+                        <td>{{item.check_no}}</td>
+                        
+                        <td ng-hide="true">{{item.check_amount}}</td>
+                        
+                        <td ng-hide="true">{{item.check_date | date : "MM/dd/yyyy"}}</td>
+                        
             
                         <td>
                             <div class="btn-group">

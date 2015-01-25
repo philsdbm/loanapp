@@ -27,13 +27,13 @@
 
                 <div class="row">
                     <div class="form-group col-xs-6 col-md-4">
-                        <label for="renewaltypeInput" class="ng-binding">Renewaltype</label>
+                        <label for="renewal_typeInput" class="ng-binding">Renewal_type</label>
                         <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
                         
-                        <select name="renewaltypeInput"
-                                ng-model="loanform.renewaltype"
+                        <select name="renewal_typeInput"
+                                ng-model="loanform.renewal_type"
                                 class="form-control"
-                                ng-options="item._id as item.name for item in renewaltypeList"></select>
+                                ng-options="item._id as item.name for item in renewal_typeList"></select>
                         
                     </div>
                 </div>
@@ -59,9 +59,39 @@
                         <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
                         
                         <select name="memberInput"
-                                ng-model="loanform.member"
+                                ng-model="loanform.member" ng-change="memberUpdated()"
                                 class="form-control"
                                 ng-options="item._id as getMemberName(item) for item in memberList"></select>
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="salaryInput" class="ng-binding">Salary</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="salaryInput"
+                               ng-model="loanform.salary"
+                               class="form-control"
+                               placeholder="Enter Salary"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="fixed_depositInput" class="ng-binding">Fixed_deposit</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="fixed_depositInput"
+                               ng-model="loanform.fixed_deposit"
+                               class="form-control"
+                               placeholder="Enter Fixed_deposit"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
                         
                     </div>
                 </div>
@@ -76,6 +106,246 @@
                                 ng-model="loanform.bureau"
                                 class="form-control"
                                 ng-options="item._id as item.name for item in bureauList"></select>
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="loans_grantedInput" class="ng-binding">Loans_granted</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="loans_grantedInput"
+                               ng-model="loanform.loans_granted"
+                               class="form-control"
+                               placeholder="Enter Loans_granted"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="interest_on_loansInput" class="ng-binding">Interest_on_loans</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="interest_on_loansInput"
+                               ng-model="loanform.interest_on_loans"
+                               class="form-control"
+                               placeholder="Enter Interest_on_loans"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="service_chargeInput" class="ng-binding">Service_charge</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="service_chargeInput"
+                               ng-model="loanform.service_charge"
+                               class="form-control"
+                               placeholder="Enter Service_charge"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="fines_and_penaltiesInput" class="ng-binding">Fines_and_penalties</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="fines_and_penaltiesInput"
+                               ng-model="loanform.fines_and_penalties"
+                               class="form-control"
+                               placeholder="Enter Fines_and_penalties"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="underpayment_of_previous_loanInput" class="ng-binding">Underpayment_of_previous_loan</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="underpayment_of_previous_loanInput"
+                               ng-model="loanform.underpayment_of_previous_loan"
+                               class="form-control"
+                               placeholder="Enter Underpayment_of_previous_loan"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="previous_loan_granted_onInput" class="ng-binding">Previous_loan_granted_on</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input type="date"
+                               name="previous_loan_granted_onInput"
+                               ng-model="loanform.previous_loan_granted_on"
+                               class="form-control"
+                               placeholder="Enter Previous_loan_granted_on"/>
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="previous_loanInput" class="ng-binding">Previous_loan</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="previous_loanInput"
+                               ng-model="loanform.previous_loan"
+                               class="form-control"
+                               placeholder="Enter Previous_loan"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="less_paymentsInput" class="ng-binding">Less_payments</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="less_paymentsInput"
+                               ng-model="loanform.less_payments"
+                               class="form-control"
+                               placeholder="Enter Less_payments"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="notesInput" class="ng-binding">Notes</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="notesInput"
+                               ng-model="loanform.notes"
+                               class="form-control"
+                               placeholder="Enter Notes"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="capital_buildupInput" class="ng-binding">Capital_buildup</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="capital_buildupInput"
+                               ng-model="loanform.capital_buildup"
+                               class="form-control"
+                               placeholder="Enter Capital_buildup"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="net_loan_proceedsInput" class="ng-binding">Net_loan_proceeds</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="net_loan_proceedsInput"
+                               ng-model="loanform.net_loan_proceeds"
+                               class="form-control"
+                               placeholder="Enter Net_loan_proceeds"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="months_to_payInput" class="ng-binding">Months_to_pay</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="months_to_payInput"
+                               ng-model="loanform.months_to_pay"
+                               class="form-control"
+                               placeholder="Enter Months_to_pay"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="loan_monthly_repaymentInput" class="ng-binding">Loan_monthly_repayment</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="loan_monthly_repaymentInput"
+                               ng-model="loanform.loan_monthly_repayment"
+                               class="form-control"
+                               placeholder="Enter Loan_monthly_repayment"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="check_noInput" class="ng-binding">Check_no</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="check_noInput"
+                               ng-model="loanform.check_no"
+                               class="form-control"
+                               placeholder="Enter Check_no"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="check_amountInput" class="ng-binding">Check_amount</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="check_amountInput"
+                               ng-model="loanform.check_amount"
+                               class="form-control"
+                               placeholder="Enter Check_amount"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="check_dateInput" class="ng-binding">Check_date</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input type="date"
+                               name="check_dateInput"
+                               ng-model="loanform.check_date"
+                               class="form-control"
+                               placeholder="Enter Check_date"/>
                         
                     </div>
                 </div>

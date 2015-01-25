@@ -12,6 +12,8 @@ var MemberSchema = new Schema({
     last_name: String,
     bureau: {type: Schema.ObjectId, ref:'Bureau'},
     salary: Number,
+    fixed_deposit: Number,
+    savings_deposit: Number,
     join_date: Date
 });
 

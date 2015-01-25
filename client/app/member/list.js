@@ -27,7 +27,7 @@ angular.module('testYeomanApp')
             });
             return results[0];
         }
-        
+	        
 
 
     $scope.addNew = function() {

@@ -27,10 +27,8 @@ angular.module('testYeomanApp')
     };
 
       
-
     $http.get('/api/bureaus').success(function(bureaus) {
       $scope.bureauList = bureaus;
     });
-
-        
+    
   }]);

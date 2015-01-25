@@ -18,16 +18,16 @@ angular.module('testYeomanApp')
     }
 
       
-        $http.get('/api/renewaltypes').success(function(renewaltypes) {
-            $scope.renewaltypes = renewaltypes;
+        $http.get('/api/renewal_types').success(function(renewal_types) {
+            $scope.renewal_types = renewal_types;
         });
-        $scope.getRenewaltypeById = function(id) {
-            var results = jQuery.grep($scope.renewaltypes, function( renewaltype, i ) {
-                return ( renewaltype._id === id );
+        $scope.getRenewal_typeById = function(id) {
+            var results = jQuery.grep($scope.renewal_types, function( renewal_type, i ) {
+                return ( renewal_type._id === id );
             });
             return results[0];
         }
-        
+	        
         $http.get('/api/loantypes').success(function(loantypes) {
             $scope.loantypes = loantypes;
         });
@@ -37,7 +37,7 @@ angular.module('testYeomanApp')
             });
             return results[0];
         }
-        
+	        
         $http.get('/api/members').success(function(members) {
             $scope.members = members;
         });
@@ -47,11 +47,13 @@ angular.module('testYeomanApp')
             });
             return results[0];
         }
-        
-        $scope.getMemberName = function(member) {
-        	return member.last_name + ", " + member.first_name + " " + member.middle_name;
-        }
-        
+	        
+	    		
+	    	$scope.getMemberName = function(member) {
+	            return member.last_name + ", " + member.first_name + " " + member.middle_name;
+	        }
+	    	
+	    	
         $http.get('/api/bureaus').success(function(bureaus) {
             $scope.bureaus = bureaus;
         });
@@ -61,7 +63,7 @@ angular.module('testYeomanApp')
             });
             return results[0];
         }
-        
+	        
 
 
     $scope.addNew = function() {
