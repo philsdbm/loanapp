@@ -385,10 +385,10 @@ module.exports = function (grunt) {
       },
       openshift: {
         options: {
-          remote: 'openshift',
+          remote: 'ssh://54c1799f4382ec929c000004@loanapp-philsdbm.rhcloud.com/~/git/loanapp.git/',
           branch: 'master'
         }
-      }
+      },
     },
 
     // Run some tasks in parallel to speed up the build process
