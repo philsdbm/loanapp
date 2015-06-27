@@ -30,6 +30,7 @@ angular.module('testYeomanApp')
     });*/
     // MENU ITEM END
     
+    
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;
