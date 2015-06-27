@@ -19,7 +19,8 @@
 				"salary": "Number",
 				"fixed_deposit": "Number",
 				"savings_deposit": "Number",
-                "join_date": "Date"
+                "join_date": "Date",
+                "loan": "MongooseReference:LoanForm"
             }
         },
         {
