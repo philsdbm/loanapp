@@ -3,35 +3,36 @@
 angular.module('testYeomanApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
-      'title': 'Home',
+      'title': 'HOME',
       'link': '/'
     }];
 
     // MENU ITEM BEGIN
-    $scope.menu.push({
-        'title': 'Loanform',
-        'link': '/loanforms'
-    });
-    $scope.menu.push({
+    /*$scope.menu.push({
         'title': 'Loantype',
         'link': '/loantypes'
     });
     $scope.menu.push({
         'title': 'Renewal_type',
         'link': '/renewal_types'
-    });
+    });*/
     $scope.menu.push({
-        'title': 'Member',
-        'link': '/members'
-    });
-    $scope.menu.push({
-        'title': 'Account_balance',
+        'title': 'ACCOUNT BALANCE',
         'link': '/account_balances'
     });
     $scope.menu.push({
+        'title': 'LOAN APPLICATION',
+        'link': '/loanforms'
+    });
+    
+    $scope.menu.push({
+        'title': 'ADD MEMBER',
+        'link': '/members'
+    });
+    /*$scope.menu.push({
         'title': 'Bureau',
         'link': '/bureaus'
-    });
+    });*/
     // MENU ITEM END
     
     
