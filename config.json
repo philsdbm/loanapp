@@ -36,6 +36,7 @@
                 "capital_buildup": "Number"
             }
         },
+        
         {
             "name": "loanform",
             "model": {
