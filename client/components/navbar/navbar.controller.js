@@ -8,31 +8,30 @@ angular.module('testYeomanApp')
     }];
 
     // MENU ITEM BEGIN
-    /*$scope.menu.push({
+    $scope.menu.push({
+        'title': 'Loanform',
+        'link': '/loanforms'
+    });
+    $scope.menu.push({
         'title': 'Loantype',
         'link': '/loantypes'
     });
     $scope.menu.push({
         'title': 'Renewal_type',
         'link': '/renewal_types'
-    });*/
+    });
     $scope.menu.push({
-        'title': 'ACCOUNT BALANCE',
+        'title': 'Member',
+        'link': '/members'
+    });
+    $scope.menu.push({
+        'title': 'Account_balance',
         'link': '/account_balances'
     });
     $scope.menu.push({
-        'title': 'LOAN APPLICATION',
-        'link': '/loanforms'
-    });
-    
-    $scope.menu.push({
-        'title': 'ADD MEMBER',
-        'link': '/members'
-    });
-    /*$scope.menu.push({
         'title': 'Bureau',
         'link': '/bureaus'
-    });*/
+    });
     // MENU ITEM END
     
     
@@ -50,6 +49,13 @@ angular.module('testYeomanApp')
       return route === $location.path();
     };
   });
+
+
+
+
+
+
+
 
 
 

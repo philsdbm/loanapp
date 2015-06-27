@@ -8,7 +8,6 @@ angular.module('testYeomanApp')
           $scope.account_balance = account_balance;
 
                 $scope.account_balance.application_date = new Date(account_balance.application_date);
-                  $scope.account_balance.loan_granted = new Date(account_balance.loan_granted);
                   $scope.account_balance.release_date = new Date(account_balance.release_date);
                   $scope.account_balance.as_of = new Date(account_balance.as_of);
             

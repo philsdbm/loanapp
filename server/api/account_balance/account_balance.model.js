@@ -10,7 +10,7 @@ var Account_balanceSchema = new Schema({
     loantype: {type: Schema.ObjectId, ref:'Loantype'},
     member: {type: Schema.ObjectId, ref:'Member'},
     application_date: Date,
-    loan_granted: Date,
+    loan_granted: Number,
     equity: Number,
     net_proceeds: Number,
     term: Number,
