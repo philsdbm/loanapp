@@ -24,6 +24,7 @@ angular.module('testYeomanApp')
         'title': 'Member',
         'link': '/members'
     });
+    // abc duh
     /*$scope.menu.push({
         'title': 'Bureau',
         'link': '/bureaus'
