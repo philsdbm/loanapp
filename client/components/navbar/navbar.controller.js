@@ -25,6 +25,10 @@ angular.module('testYeomanApp')
         'link': '/members'
     });
     $scope.menu.push({
+        'title': 'Account_balance',
+        'link': '/account_balances'
+    });
+    $scope.menu.push({
         'title': 'Bureau',
         'link': '/bureaus'
     });
@@ -45,6 +49,13 @@ angular.module('testYeomanApp')
       return route === $location.path();
     };
   });
+
+
+
+
+
+
+
 
 
 

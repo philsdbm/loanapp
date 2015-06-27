@@ -31,4 +31,8 @@ angular.module('testYeomanApp')
       $scope.bureauList = bureaus;
     });
     
+    $http.get('/api/loans').success(function(loans) {
+      $scope.loanList = loans;
+    });
+    
   }]);

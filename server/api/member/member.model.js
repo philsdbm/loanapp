@@ -14,7 +14,8 @@ var MemberSchema = new Schema({
     salary: Number,
     fixed_deposit: Number,
     savings_deposit: Number,
-    join_date: Date
+    join_date: Date,
+    loan: {type: Schema.ObjectId, ref:'LoanForm'}
 });
 
 module.exports = mongoose.model('Member',  MemberSchema);

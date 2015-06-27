@@ -24,6 +24,9 @@ angular.module('testYeomanApp', [
     $stateProvider.state('member_list', { url: "/members", templateUrl: 'app/member/list.html', controller: 'MemberListController' });
     $stateProvider.state('member_edit', { url: "/member/edit", templateUrl: 'app/member/edit.html', controller: 'MemberEditController' });
     $stateProvider.state('member_edit_id', { url: "/member/edit/:id", templateUrl: 'app/member/edit.html', controller: 'MemberEditController' });
+    $stateProvider.state('account_balance_list', { url: "/account_balances", templateUrl: 'app/account_balance/list.html', controller: 'Account_balanceListController' });
+    $stateProvider.state('account_balance_edit', { url: "/account_balance/edit", templateUrl: 'app/account_balance/edit.html', controller: 'Account_balanceEditController' });
+    $stateProvider.state('account_balance_edit_id', { url: "/account_balance/edit/:id", templateUrl: 'app/account_balance/edit.html', controller: 'Account_balanceEditController' });
     $stateProvider.state('bureau_list', { url: "/bureaus", templateUrl: 'app/bureau/list.html', controller: 'BureauListController' });
     $stateProvider.state('bureau_edit', { url: "/bureau/edit", templateUrl: 'app/bureau/edit.html', controller: 'BureauEditController' });
     $stateProvider.state('bureau_edit_id', { url: "/bureau/edit/:id", templateUrl: 'app/bureau/edit.html', controller: 'BureauEditController' });
@@ -69,6 +72,19 @@ angular.module('testYeomanApp', [
       });
     });
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

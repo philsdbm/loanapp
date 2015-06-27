@@ -28,6 +28,16 @@ angular.module('testYeomanApp')
             return results[0];
         }
 	        
+        $http.get('/api/loans').success(function(loans) {
+            $scope.loans = loans;
+        });
+        $scope.getLoanById = function(id) {
+            var results = jQuery.grep($scope.loans, function( loan, i ) {
+                return ( loan._id === id );
+            });
+            return results[0];
+        }
+	        
 
 
     $scope.addNew = function() {

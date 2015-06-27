@@ -15,6 +15,7 @@ module.exports = function(app) {
   app.use('/api/loantypes', require('./api/loantype'));
   app.use('/api/renewal_types', require('./api/renewal_type'));
   app.use('/api/members', require('./api/member'));
+  app.use('/api/account_balances', require('./api/account_balance'));
   app.use('/api/bureaus', require('./api/bureau'));
     // ROUTE INCLUDES END
       app.use('/api/things', require('./api/thing'));
@@ -32,6 +33,19 @@ module.exports = function(app) {
       res.sendfile(app.get('appPath') + '/index.html');
     });
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

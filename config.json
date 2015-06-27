@@ -10,6 +10,23 @@
             }
         },
         {
+            "name": "account_balance",
+            "model": {
+                "loantype": "MongooseReference:Loantype",
+                "member": "MongooseReferenceCmbName:Member",
+                "application_date": "Date",
+                "loan_granted": "Date",
+                "equity": "Number",
+                "net_proceeds": "Number",
+                "term": "Number",
+                "monthly_repayment": "Number",
+                "check_no": "String",
+                "release_date": "Date",
+                "loan_balance": "Number",
+                "as_of": "Date"
+            }
+        },
+        {
             "name": "member",
             "model": {
                 "first_name": "String",

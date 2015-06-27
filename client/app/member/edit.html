@@ -128,6 +128,20 @@
                     </div>
                 </div>
                 
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="loanInput" class="ng-binding">Loan</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <select name="loanInput"
+                                ng-model="member.loan"
+                                class="form-control"
+                                ng-options="item._id as item.name for item in loanList"></select>
+                        
+                    </div>
+                </div>
+                
                 <div class="row">
                     <div class="col-xs-6 col-md-4">
                         <button type="submit" class="btn btn-primary pull-right" ng-disabled="form.$error.required"
